@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/sign.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <h2>Form</h2>
+            
+            <form  onsubmit="myFunc(event)">
+            <label for="name">First Name</label>
+            <input type="text" placeholder="First Name" id="first-name">
+            <label for="name">Last Name</label>
+            <input type="text" placeholder="Last Name" id="last-name">
+            <label for="name">User Name</label>
+            <input type="text" placeholder="User Name" id="user-name">
+            <label for="name">Password</label>
+            <input type="password" placeholder="Password" id="Password">
+            <label for="name">Email</label>
+            <input type="email" placeholder="Email" id="email">
+            <button type="submit" value="submit">Submit</button>
+        </form>
+        </div>
+    </div>
+    <script>
+            function myFunc(event){
+    event.preventDefault();
+
+
+
+var Name=document.getElementById("first-name").value;
+var lastName=document.getElementById("last-name").value;
+var userName=document.getElementById("user-name").value;
+var Password=document.getElementById("Password").value;
+var Email=document.getElementById("email").value;
+
+localStorage.setItem('first-name',Name);
+localStorage.setItem('last-name',lastName);
+localStorage.setItem('user-name',userName);
+
+localStorage.setItem('email',Email);
+localStorage.setItem('Password',Password);
+}
+    </script>
+</body>
+</html>
